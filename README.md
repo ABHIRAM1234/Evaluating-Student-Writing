@@ -37,9 +37,4 @@ lgb sentence prediction
 &emsp;&emsp; stage2_recall.py: generate the word segments as data for stage 2     
 &emsp;&emsp; stage2_lstm_pca_train.py: train the lstm & pca model as features of lightgbm   
 &emsp;&emsp; stage2_lgb_train.py: train the lightgbm model   
-&emsp;&emsp; init.sh: the scripts to run all the pipeline   
-
-
-
-
-
+&emsp;&emsp; init.sh: the scripts to run all the pipeline
