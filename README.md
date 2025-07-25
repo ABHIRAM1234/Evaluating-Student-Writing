@@ -24,8 +24,7 @@ Manually providing detailed feedback on student writing is a time-consuming proc
 
 The solution is a multi-stage pipeline designed for maximum accuracy and robustness.
 
-```
-mermaid
+```mermaid
 graph TD
     A[Raw Essay Text] --> B{Tokenization & BIO Tagging};
     
