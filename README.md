@@ -116,9 +116,9 @@ python src/predict.py --model_path models/final_model.bin --text_file path/to/yo
 │   ├── train.py            # Main training script
 │   └── predict.py          # Inference script
 ├── requirements.txt        # Project dependencies
-└── README.md```
+└── README.md
+```
 
----
 
 ## 🙏 Acknowledgements
 
