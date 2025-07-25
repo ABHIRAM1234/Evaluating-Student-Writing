@@ -27,14 +27,14 @@ The solution is a multi-stage pipeline designed for maximum accuracy and robustn
 ```mermaid
 graph TD
     A[Raw Essay Text] --> B{Tokenization & BIO Tagging};
-    
+
     B --> C[Longformer Model];
     B --> D[BigBird Model];
     B --> E[Transformer Embeddings];
-    
+
     E --> E2[Feature Engineering];
     E2 --> E3[XGBoost Model];
-    
+
     C --> F[Ensemble Predictions];
     D --> F;
     E3 --> F;
