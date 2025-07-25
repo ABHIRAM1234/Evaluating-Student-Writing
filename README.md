@@ -24,19 +24,18 @@ Manually providing detailed feedback on student writing is a time-consuming proc
 
 The solution is a multi-stage pipeline designed for maximum accuracy and robustness.
 
-```mermaid
+```
+mermaid
 graph TD
     A[Raw Essay Text] --> B{Tokenization & BIO Tagging};
+    
     B --> C[Longformer Model];
     B --> D[BigBird Model];
+    B --> E[Transformer Embeddings];
     
-    subgraph Hybrid Model Path
-        direction LR
-        B --> E1[Get Embeddings];
-        E1 --> E2[Feature Engineering];
-        E2 --> E3[XGBoost Model];
-    end
-
+    E --> E2[Feature Engineering];
+    E2 --> E3[XGBoost Model];
+    
     C --> F[Ensemble Predictions];
     D --> F;
     E3 --> F;
