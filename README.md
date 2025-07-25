@@ -29,10 +29,12 @@ graph TD
     A[Raw Essay Text] --> B{Tokenization & BIO Tagging};
     B --> C[Longformer Model];
     B --> D[BigBird Model];
-    B --> E[XGBoost Path];
-    subgraph E [Hybrid Model]
+    
+    subgraph Hybrid Model Path
         direction LR
-        E1[Longformer Embeddings] --> E2[Feature Engineering] --> E3[XGBoost Model];
+        B --> E1[Get Embeddings];
+        E1 --> E2[Feature Engineering];
+        E2 --> E3[XGBoost Model];
     end
 
     C --> F[Ensemble Predictions];
